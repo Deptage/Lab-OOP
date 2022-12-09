@@ -4,6 +4,9 @@ public class Element implements Operations{
     {
         this.value=initial;
     }
+    Element(){
+        this.value=0;
+    }
     public Element addition(double add)
     {
         return new Element(this.value+add);
