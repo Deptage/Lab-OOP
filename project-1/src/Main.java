@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.*;
+import pl.poznan.put.example.Example;
+import pl.poznan.put.menus.Menu;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package pl.poznan.put.interfaces;
+import pl.poznan.put.matrix.Matrix;
 public interface Operations {
     //this interface is implemented by the Matrix class
     //addition, subtraction are methods

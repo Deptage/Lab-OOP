@@ -1,3 +1,7 @@
+package pl.poznan.put.matrix;
+
+import pl.poznan.put.interfaces.Operations;
+
 public class Matrix implements Operations {
     private int numberOfRows, numberOfColumns;
     private Element[][] elements;
@@ -8,7 +12,7 @@ public class Matrix implements Operations {
         this.elements = new Element[numberOfRows][numberOfColumns];
     }
 
-    Matrix(int m, int n, double[][] tab) {
+    public Matrix(int m, int n, double[][] tab) {
         this.numberOfRows = m;
         this.numberOfColumns = n;
         this.elements = new Element[numberOfRows][numberOfColumns];
@@ -59,7 +63,7 @@ public class Matrix implements Operations {
         return tempMatrix;
     }
 
-    Matrix(Matrix m1, Matrix m2)//to multiply matrices
+    public Matrix(Matrix m1, Matrix m2)//to multiply matrices
     {
         this.numberOfRows = m1.numberOfRows();
         this.numberOfColumns = m2.numberOfColumns();
@@ -75,7 +79,7 @@ public class Matrix implements Operations {
         }
     }
 
-    Matrix(Matrix m1)//transposing a matrix
+    public Matrix(Matrix m1)//transposing a matrix
     {
         this.numberOfRows = m1.numberOfColumns();
         this.numberOfColumns = m1.numberOfRows();
@@ -87,7 +91,7 @@ public class Matrix implements Operations {
         }
     }
 
-    Matrix(Matrix m1, double number) {
+    public Matrix(Matrix m1, double number) {
         //multiplying matrix by a number
         this.numberOfRows = m1.numberOfColumns();
         this.numberOfColumns = m1.numberOfRows();

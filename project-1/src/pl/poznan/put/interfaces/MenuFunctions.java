@@ -1,3 +1,6 @@
+package pl.poznan.put.interfaces;
+import pl.poznan.put.matrix.Matrix;
+
 public interface MenuFunctions {
     void insertAMatrix(Matrix m1);
 

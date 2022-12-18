@@ -1,3 +1,5 @@
+
+package pl.poznan.put.menus;
 public class UI {
     public void printUI() {
         System.out.println("===========================================================");

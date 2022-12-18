@@ -1,6 +1,9 @@
+package pl.poznan.put.menus;
 import java.lang.reflect.InaccessibleObjectException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import pl.poznan.put.interfaces.MenuFunctions;
+import pl.poznan.put.matrix.Matrix;
 
 public class Menu implements MenuFunctions {
     private ArrayList<Matrix> matrices = new ArrayList<>();

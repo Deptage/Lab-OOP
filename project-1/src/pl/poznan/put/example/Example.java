@@ -1,3 +1,6 @@
+package pl.poznan.put.example;
+import pl.poznan.put.matrix.Matrix;
+
 public class Example {
     //example matrices that will be added to the memory
     final private double tab[][] = {
