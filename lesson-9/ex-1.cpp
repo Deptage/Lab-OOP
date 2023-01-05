@@ -7,7 +7,7 @@ public:
 class FakeFootballGame: public Game//fake class
 {
 private:
-    string matchResult="2137";
+    string matchResult="2:1";
 public:
     string result(){
         return matchResult;
@@ -15,8 +15,12 @@ public:
 };
 int main() {
     FakeFootballGame fg;
-    if(fg.result()=="2137")
+    if(fg.result()=="2:1")
         cout<<"Good"<<endl;
-    else cout<<"Bad"<<endl;
+    else
+    {
+        cout<<"Incorrect score"<<endl;
+        return 1;
+    }
     return 0;
 }
