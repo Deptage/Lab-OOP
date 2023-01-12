@@ -6,16 +6,16 @@ final public class Shiritori {
     void play(String word)
     {
         //if valid, add to the array, return the array
-        //invald: return game over and set the boolean to true
+        //invalid: return game over and set the boolean to true
         if(words.size()==0)
         {
             words.add(word);
             return;
         }
-        String x=words.get(words.size()-1);
-        char y=x.charAt(x.length()-1);
-        char z=word.charAt(0);
-        if(y==z)
+        String last_word_in_array=words.get(words.size()-1);
+        char last_character_last_word=last_word_in_array.charAt(last_word_in_array.length()-1);
+        char first_character_new=word.charAt(0);
+        if(last_character_last_word==first_character_new)
         {
             for(int i = 0; i<words.size();i++)
             {
@@ -26,11 +26,7 @@ final public class Shiritori {
                     System.out.println(words);
                     return;
                 }
-                else {
-                    System.out.println("Game over!");
-                    game_over=true;
-                    return;
-                }
+                else break;
             }
         }
         else {

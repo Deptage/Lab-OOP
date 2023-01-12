@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Menu {
+final public class Menu {
     Shiritori game=new Shiritori();
     Scanner cin=new Scanner(System.in);
     void newGame()
     {
-        boolean goon=true;
-        while(goon)
+        boolean goOn=true;
+        while(goOn)
         {
             System.out.println("1. Play");
             System.out.println("2. Print the words");
@@ -20,7 +20,7 @@ public class Menu {
                 case 1 -> playGame();
                 case 2 -> game.printWords();
                 case 3 -> game.restart();
-                case 4-> goon=false;
+                case 4 -> goOn=false;
             }
         }
     }
