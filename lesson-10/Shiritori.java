@@ -15,25 +15,28 @@ final public class Shiritori {
         String last_word_in_array=words.get(words.size()-1);
         char last_character_last_word=last_word_in_array.charAt(last_word_in_array.length()-1);
         char first_character_new=word.charAt(0);
+        boolean flag=true;
         if(last_character_last_word==first_character_new)
         {
             for(int i = 0; i<words.size();i++)
             {
                 String temp=words.get(i);
-                if(!temp.equals(word))
+                if(temp.equals(word))
                 {
-                    words.add(word);
-                    System.out.println(words);
-                    return;
+                    flag=false;
+                    break;
                 }
-                else break;
+            }
+            if(flag)
+            {
+                words.add(word);
+                System.out.println(words);
+                return;
             }
         }
-        else {
-            System.out.println("Game over!");
-            game_over=true;
-            return;
-        }
+        System.out.println("Game over!");
+        game_over=true;
+        return;
     }
     void restart()
     {
